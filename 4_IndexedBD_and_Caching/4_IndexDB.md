@@ -1,4 +1,4 @@
-﻿###4.1 Introducing the IDB Promised Library
+﻿### 4.1 Introducing the IDB Promised Library
 
 Data base is the best model to add/remove/iterate/query the posts.
 Web Workers has  [IndexDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/) functionality - the database to store records holding simple values and hierarchical objects.
