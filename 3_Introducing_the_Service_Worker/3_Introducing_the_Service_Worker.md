@@ -1,6 +1,8 @@
+Here are useful [graphics](https://github.com/delapuente/service-workers-101) summurizing SW major concepts.
+
 For now, using vargalaszlo1981 notes as is. 
 
-`
+```javascript
 //Register a serviceWorker
 
 if (!navigator.serviceWorker) 
@@ -128,4 +130,4 @@ navigator
    .addEventListener('controllerchange', function () { // serviceWorker fires an event when the controlling serviceWorker changes
       //navigator.serviceWorker.controller has changed - use this signal to reload the page
    })
-`
+```

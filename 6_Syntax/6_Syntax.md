@@ -1,3 +1,38 @@
+### 6.2 Let and Const
+#### var:
+Before any JavaScript code is executed, all variables are "hoisted", i.e. raised to the top of the function scope:
+```
+function a(param) {
+  if(param){var newVar = 'value';}
+}
+```
+becomes
+```
+function a(param) {
+  var newVar;
+  if(param){ newVar = 'value';}
+}
+```
+Variables declared with `var` are **scoped to the function**.
+In ES6 using `var`is considered **bad practice**.
+
+#### let and const:
+Variables declared with `let` and `const` are **scoped to the block**.
+[Temporal dead zone](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) =  `let` and `const` variables can be **accessed** only **after they’ve been declared**, i.e. variables are in a "temporal dead zone" ([ReferenceError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError) if tying to access) from the start of the block until their declaration is processed.
+
+#### let: 
+* can be **reassigned**, 
+* **can’t be redeclared** in the same scope.
+
+Use `let` when you plan to reassign new values to a variable.
+
+#### const:
+* **must be assigned an initial value**, 
+* **can’t be redeclared** in the same scope, 
+* **can’t be reassigned**.
+
+Use `const` to declare a constant :).
+
 ### 6.4 Template Literals
 
 [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) are string literals allowing embedded expressions.
