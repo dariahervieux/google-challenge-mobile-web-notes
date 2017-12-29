@@ -7,8 +7,8 @@ This repo contains some notes for [Google Developer Challenge Scholarship 2017: 
 - [x] - [Lesson 3: Service Workers](3_Introducing_the_Service_Worker/)
 - [x] - [Lesson 4: IndexedDB & Caching](4_IndexedBD_and_Caching/)
 - [x] - [Lesson 6: Javascript Syntax](6_Syntax/)
-- [ ] - Lesson 7: Functions
-- [ ] - Lesson 8: Built-ins
+- [x] - [Lesson 7: Functions](7_Functions/)
+- [x] - [Lesson 8: Built-ins](8_Built-ins)
 - [ ] - Lesson 9: Professional Developer-fu
 
 Your interest and any contribution to enrich/improve this repo content are highly appreciated.
