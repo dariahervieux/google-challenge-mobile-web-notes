@@ -9,7 +9,7 @@ This repo contains some notes for [Google Developer Challenge Scholarship 2017: 
 - [x] - [Lesson 6: Javascript Syntax](6_Syntax/)
 - [x] - [Lesson 7: Functions](7_Functions/)
 - [x] - [Lesson 8: Built-ins](8_Built-ins)
-- [ ] - Lesson 9: Professional Developer-fu
+- [x] - [Lesson 9: Professional Developer-fu](9_Developer-fu)
 
 Your interest and any contribution to enrich/improve this repo content are highly appreciated.
 

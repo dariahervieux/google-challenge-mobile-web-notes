@@ -123,7 +123,7 @@ for (const [key, value] of map) {
 ```
 * Use Map's [forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach)
 ```javascript
-map.forEach((key, value) => console.log(key, value));
+map.forEach((value, key) => console.log(key, value));
 ```
 
 ### 8.16 WeakMaps
