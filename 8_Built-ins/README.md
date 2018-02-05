@@ -88,6 +88,41 @@ Setting a reference to null on any object in a WeakSet makes it eligible for [ga
 
 Usage: an efficient, lightweight solution for creating groups of objects.
 
+Examples:
+
+1. extending sealed objects (from this [stackoverflow](https://stackoverflow.com/questions/29413222/what-are-the-actual-uses-of-es6-weakmap)) 
+Example:
+
+> Let's say you're NodeJS and you have Promise objects - now you want to keep track of all the currently rejected promises - however you do not want to keep them from being garbage collected in case no references exist to them.
+
+Solution: using WeakMap with Promise as a key and Promise associated state as a value.
+And the real implementation can be seen [here](https://github.com/nodejs/node/pull/758).
+
+2. making private data (from this [article](https://www.nczonline.net/blog/2014/01/21/private-instance-members-with-weakmaps-in-javascript/)) really private
+```js
+var Person = (function() {
+
+    var privateData = new WeakMap();
+
+    function Person(name) {
+        privateData.set(this, { name: name });
+    }
+
+    Person.prototype.getName = function() {
+        return privateData.get(this).name;
+    };
+
+    return Person;
+}());
+```
+
+3. Caching computed results via WeakMaps (from [Exploring ES](https://leanpub.com/exploring-es6/) book)
+Example is available [here](http://exploringjs.com/es6/ch_maps-sets.html#_caching-computed-results-via-weakmaps)
+
+4. Managing listeners (from the same book)
+Example is [here](http://exploringjs.com/es6/ch_maps-sets.html#_managing-listeners)
+
+
 ###8.13 Creating & Modifying Maps
 
  `Map` - stores key-value pairs, like objects contain named properties with values.
@@ -137,6 +172,12 @@ A WeakMap is just like a normal Map with a few key differences:
 Setting a reference to null on any key object in a WeakMap makes it eligible for [garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#Garbage_collection).
 
 Usage:  an efficient, lightweight solution for creating groupings of objects with metadata.
+Examples:
+
+1. tagging objects without changing them 
+Example (from [Exploring ES](https://leanpub.com/exploring-es6/) book): [mark](http://exploringjs.com/es6/ch_proxies.html#sec_detect-proxies) objects that were created by a factory
+2. [class branding](https://mail.mozilla.org/pipermail/es-discuss/2015-June/043027.html) (ensuring that class methods are only called on instances that were created by it)
+
 
 ### 8.18 Promises
 
